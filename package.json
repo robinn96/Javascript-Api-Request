@@ -1,0 +1,39 @@
+{
+  "name": "bfapitesting",
+  "version": "1.0.0",
+  "description": "Demostration of api testing with javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*spec.js",
+    "test-with-html-report": "mocha tests/**/*.spec.js --timeout 5000 --reporter mochawesome",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "open-report": "open mochawesome-report/mochawesome.html"
+  },
+  "author": "Robert Torres",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.16.9",
+    "chai": "^4.3.6",
+    "dotenv": "^14.3.2",
+    "mocha": "^9.2.0",
+    "mochawesome": "^7.0.1",
+    "standard": "^16.0.4",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.10"
+  },
+  "standard": {
+    "globals": [
+      "beforeEach",
+      "describe",
+      "it",
+      "request"
+    ]
+  }
+}
